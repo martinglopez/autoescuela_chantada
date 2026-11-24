@@ -1,0 +1,62 @@
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #ffffff;
+  --surface: #f4f4f5;
+  --surface2: #e9e9eb;
+  --accent: #e63946;
+  --text: #111111;
+  --muted: #5a5d6a;
+  --border: rgba(0,0,0,0.09);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Hero entrada ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-anim-1 { animation: fadeUp 0.7s ease 0.1s both; }
+.hero-anim-2 { animation: fadeUp 0.7s ease 0.25s both; }
+.hero-anim-3 { animation: fadeUp 0.7s ease 0.4s both; }
+.hero-anim-4 { animation: fadeUp 0.7s ease 0.55s both; }
+.hero-anim-5 { animation: fadeUp 0.8s ease 0.2s both; }
+
+/* ── Responsive ── */
+@media (max-width: 760px) {
+  .nav-inner  { padding: 0.6rem 1.25rem !important; }
+  .nav-links  { display: none !important; }
+  .nav-badge  { display: none !important; }
+
+  .hero       { grid-template-columns: 1fr !important; padding: 6rem 1.25rem 3rem !important; background: #ffffff !important; }
+  .hero-carnet{ display: none !important; }
+  .hero-stats { gap: 1.5rem !important; flex-wrap: wrap !important; }
+  .hero-btns  { flex-wrap: wrap !important; }
+  .hero-title { font-size: clamp(2rem, 8.5vw, 3.5rem) !important; letter-spacing: 1px !important; line-height: 1.1 !important; }
+  .hero-br    { display: none !important; }
+
+  .servicios  { padding: 4rem 1.25rem !important; }
+
+  .proceso    { grid-template-columns: 1fr !important; padding: 4rem 1.25rem !important; gap: 2rem !important; }
+  .step-num   { color: var(--accent) !important; }
+
+  .testimonios{ padding: 4rem 1.25rem !important; }
+  .cta-section { padding: 3.5rem 1.25rem !important; }
+
+  .footer-row {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 2rem 1.25rem !important;
+  }
+  .footer-legal { align-items: center !important; }
+  .footer-legal-links { justify-content: center !important; }
+}
